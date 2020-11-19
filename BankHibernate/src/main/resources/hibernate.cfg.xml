@@ -14,7 +14,7 @@
 			url, username, password, driver New Hibernate Stuff: the dialect -->
 		<property name="hibernate.connection.username">postgres</property>
 		<property name="hibernate.connection.password">postgres</property>
-		<property name="hibernate.connection.url">jdbc:postgresql://team-3.c9chs4ontkbe.us-east-1.rds.amazonaws.com:5432</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://team-3.c9chs4ontkbe.us-east-1.rds.amazonaws.com:5432/</property>
 		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
 
 		<!-- New Hibernate stuff -->

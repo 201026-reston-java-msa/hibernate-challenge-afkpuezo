@@ -29,13 +29,15 @@ public class MainClass {
 		// to persist objects to your database.
 		//----------------------------------------------------------
 		
-//		hibernateReadExample();
-//		hibernateReadAccount();
-//		getVsLoad();
+		hibernateCreateExample();
+		//hibernateReadExample();
+		//hibernateReadAccount();
+		//getVsLoad();
 	}
 	
 	
 	public static void hibernateReadExample(){
+		System.out.println("----- hibernateReadExample starting -----");
 		System.out.println("hello world");
 		
 		//Instantiate a Hibernate Dao
@@ -48,9 +50,11 @@ public class MainClass {
 		user = dao.getBankUserById(user);
 		
 		//Sysout the returned record
-		System.out.println(user);
+		System.out.println("user is" + user);
+		System.out.println("----- hibernateReadExample ending -----");
 	}
 	public static void hibernateReadAccount(){
+		System.out.println("----- hibernateReadAccount starting -----");
 		System.out.println("hello world");
 		
 		//Instantiate a Hibernate Dao
@@ -64,12 +68,14 @@ public class MainClass {
 		account = dao.getBankAccountById(account);
 		
 		//Sysout the returned record
-		System.out.println(account);
+		System.out.println("account is " + account);
+		System.out.println("----- hibernateReadAccount ending -----");
 	}
 	
 	
 	
 	public static void hibernateCreateExample(){
+		System.out.println("----- hibernateCreateExample starting -----");
 		//Instantiate a Hibernate Dao
 		Dao dao = new BankDaoImpl();
 						
@@ -78,6 +84,7 @@ public class MainClass {
 				
 		dao.createUser(user);
 		System.out.println("done saving user to db");
+		System.out.println("----- hibernateCreateExample ending -----");
 	}
 	
 	public static void getVsLoad(){
@@ -86,9 +93,11 @@ public class MainClass {
 		 *  		get(class to instantiate, the record's primary key)
 		 *  		load( 
 		 */
+		System.out.println("----- getVsLoad starting -----");
 		BankUser user = new BankDaoImpl().getBankUserByGetOrLoad();
 		System.out.println(user.getUsername());
 		System.out.println(user.getClass());
+		System.out.println("----- getVsLoad ending -----");
 	}
 
 }
