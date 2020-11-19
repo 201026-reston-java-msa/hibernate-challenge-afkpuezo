@@ -5,17 +5,17 @@
 <hibernate-configuration>
 	<session-factory>
 		<!-- JDBC Connection parameters -->
-		<property name="hibernate.connection.username">HIBERNATE_TEST</property>
-		<property name="hibernate.connection.password">p4ssw0rd</property>
-		<property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
-		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		<property name="hibernate.connection.username">postgres</property>
+		<property name="hibernate.connection.password">postgres</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://team-3.c9chs4ontkbe.us-east-1.rds.amazonaws.com:5432/postgres?currentSchema=pokemon</property>
+		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
 
 		<!-- Enable Auto Commit (Documentation doesn't recommend to do this, we need to create transactions)-->
 		<!-- We want Spring to manage transactions for us programmatically (in the near future) -->
 		<!--  <property name="hibernate.connection.autocommit">true</property>-->
 
 		<!-- Depending on the Database engine, switch dialect -->
-		<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
 
 		<!-- Show SQL Output -->
 		<property name="hibernate.show_sql">true</property>
