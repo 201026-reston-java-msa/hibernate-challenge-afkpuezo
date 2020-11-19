@@ -7,8 +7,9 @@
 		<!-- JDBC Connection parameters -->
 		<property name="hibernate.connection.username">postgres</property>
 		<property name="hibernate.connection.password">postgres</property>
-		<property name="hibernate.connection.url">jdbc:postgresql://team-3.c9chs4ontkbe.us-east-1.rds.amazonaws.com:5432/postgres?currentSchema=pokemon</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://team-3.c9chs4ontkbe.us-east-1.rds.amazonaws.com:5432/</property>
 		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+		<property name="hibernate.default_schema">pokemon</property>
 
 		<!-- Enable Auto Commit (Documentation doesn't recommend to do this, we need to create transactions)-->
 		<!-- We want Spring to manage transactions for us programmatically (in the near future) -->

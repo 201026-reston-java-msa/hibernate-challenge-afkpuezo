@@ -25,7 +25,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>com.revature.MainClass</mainClass>
+                    <mainClass>com.revature.Driver</mainClass>
                 </configuration>
             </plugin>
         </plugins>
