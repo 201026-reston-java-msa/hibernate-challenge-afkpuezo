@@ -19,7 +19,7 @@ public class BankDaoImpl implements Dao{
 		 */
 		Session session = HibernateConnectionUtil.getSession();
 		
-		BankUser returnedUser = (BankUser) session.get(BankUser.class, 1);
+		BankUser returnedUser = (BankUser) session.get(BankUser.class, user.getUserId());
 		
 		/*
 		 * 	calling a 2nd time with the same primary key will result in pulling the record from level 1 cache,
